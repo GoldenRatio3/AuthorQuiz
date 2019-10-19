@@ -1,6 +1,6 @@
 # Author Quiz
 
-TODO: Add description
+A React quiz application for guessing correct titles an author has written.
 
 ## Getting Started
 
@@ -8,7 +8,7 @@ Clone this repo and run `npm start`
 
 ### Prerequistes
 
-React installed.
+Node >= 8.10 and npm >= 5.6
 
 ## Contributing
 
