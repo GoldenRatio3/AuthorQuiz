@@ -37,7 +37,7 @@ function Book({ title }) {
 }
 
 function Continue() {
-  return <p>Continue</p>;
+  return <div />;
 }
 
 function AuthorQuiz({ turnData }) {
