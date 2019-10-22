@@ -40,12 +40,23 @@ function Continue() {
   return <div />;
 }
 
+function Footer() {
+  return (
+    <div id="footer" className="row">
+      <div className="col-12">
+        <p className="text-muted credit">All images are from Google</p>
+      </div>
+    </div>
+  );
+}
+
 function AuthorQuiz({ turnData }) {
   return (
     <div className="container-fluid">
       <Hero />
       <Turn {...shuffle(turnData)} />
       <Continue />
+      <Footer />
     </div>
   );
 }
