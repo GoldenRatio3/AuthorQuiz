@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import "./bootstrap.min.css";
+import PropTypes from "prop-types";
 
 function Hero() {
   return (
@@ -40,6 +41,18 @@ function Turn({ author, books, highlight, onAnswerSelected }) {
     </div>
   );
 }
+
+Turn.propTypes = {
+  author: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    imageUrl: PropTypes.string.isRequired,
+    imageSource: PropTypes.string.isRequired,
+    books: PropTypes.arrayOf(PropTypes.string).isRequired
+  }),
+  books: PropTypes.arrayOf(PropTypes.string).isRequired,
+  onAnswerSelected: PropTypes.func.isRequired,
+  highlight: PropTypes.string.isRequired
+};
 
 function Book({ title, onClick }) {
   return (
