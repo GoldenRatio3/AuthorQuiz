@@ -54,20 +54,11 @@ function AuthorQuiz({ turnData }) {
   return (
     <div className="container-fluid">
       <Hero />
-      <Turn {...shuffle(turnData)} />
+      <Turn {...turnData} />
       <Continue />
       <Footer />
     </div>
   );
-}
-
-function shuffle(a) {
-  var books = a.books;
-  for (let i = books.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [books[i], books[j]] = [books[j], books[i]];
-  }
-  return a;
 }
 
 export default AuthorQuiz;
