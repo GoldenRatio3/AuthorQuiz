@@ -69,10 +69,10 @@ function Book({ title, onClick }) {
   );
 }
 
-function Score({ rightAnswerCount = 0, totalAnswerCount = 0 }) {
+function Score({ rightAnswerCount, totalAnswerCount }) {
   return (
     <React.Fragment>
-      {rightAnswerCount !== undefined && (
+      {totalAnswerCount !== 0 && (
         <div className="col-11">
           <div className="float-right score">
             {rightAnswerCount}/{totalAnswerCount}
@@ -113,7 +113,9 @@ function Footer() {
 function mapStateToProps(state) {
   return {
     turnData: state.turnData,
-    highlight: state.highlight
+    highlight: state.highlight,
+    rightAnswerCount: state.rightAnswerCount,
+    totalAnswerCount: state.totalAnswerCount
   };
 }
 
@@ -131,11 +133,21 @@ function mapDispatchToProps(dispatch) {
 const AuthorQuiz = connect(
   mapStateToProps,
   mapDispatchToProps
-)(function({ turnData, highlight, onAnswerSelected, onContinue }) {
+)(function({
+  turnData,
+  highlight,
+  rightAnswerCount,
+  totalAnswerCount,
+  onAnswerSelected,
+  onContinue
+}) {
   return (
     <div className="container-fluid">
       <Hero />
-      <Score />
+      <Score
+        rightAnswerCount={rightAnswerCount}
+        totalAnswerCount={totalAnswerCount}
+      />
       <Turn
         {...turnData}
         highlight={highlight}

@@ -63,7 +63,13 @@ function getTurnData(authors) {
 }
 
 function reducer(
-  state = { authors, turnData: getTurnData(authors), highlight: "" },
+  state = {
+    authors,
+    turnData: getTurnData(authors),
+    highlight: "",
+    rightAnswerCount: 0,
+    totalAnswerCount: 0
+  },
   action
 ) {
   switch (action.type) {
