@@ -69,6 +69,20 @@ function Book({ title, onClick }) {
   );
 }
 
+function Score({ rightAnswerCount = 0, totalAnswerCount = 0 }) {
+  return (
+    <React.Fragment>
+      {rightAnswerCount !== undefined && (
+        <div className="col-11">
+          <div className="float-right score">
+            {rightAnswerCount}/{totalAnswerCount}
+          </div>
+        </div>
+      )}
+    </React.Fragment>
+  );
+}
+
 function Continue({ show, onContinue }) {
   return (
     <div className="row continue">
@@ -121,6 +135,7 @@ const AuthorQuiz = connect(
   return (
     <div className="container-fluid">
       <Hero />
+      <Score />
       <Turn
         {...turnData}
         highlight={highlight}
