@@ -78,7 +78,11 @@ function reducer(
         book => book === action.answer
       );
       return Object.assign({}, state, {
-        highlight: isCorrect ? "correct" : "wrong"
+        highlight: isCorrect ? "correct" : "wrong",
+        rightAnswerCount: isCorrect
+          ? ++state.rightAnswerCount
+          : state.rightAnswerCount,
+        totalAnswerCount: ++state.totalAnswerCount
       });
     case "CONTINUE":
       return Object.assign({}, state, {
