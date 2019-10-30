@@ -2,13 +2,15 @@
 
 A React quiz application for guessing correct titles an author has written.
 
+## [Demo](https://goldenratio3.github.io/AuthorQuiz/)
+
 ## Getting Started
 
 Clone this repo and run `npm start`
 
 ### Prerequistes
 
-Node >= 8.10 and npm >= 5.6
+`Node >= 8.10` and `npm >= 5.6`
 
 ## Contributing
 

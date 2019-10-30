@@ -104,7 +104,7 @@ let store = Redux.createStore(
 );
 
 ReactDOM.render(
-  <BrowserRouter>
+  <BrowserRouter basename={process.env.PUBLIC_URL}>
     <ReactRedux.Provider store={store}>
       <React.Fragment>
         <Route exact path="/" component={AuthorQuiz} />
