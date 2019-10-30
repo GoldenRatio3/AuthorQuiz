@@ -2,7 +2,7 @@
 
 A React quiz application for guessing correct titles an author has written.
 
-## [Demo](https://goldenratio3.github.io/AuthorQuiz/)
+### [Demo](https://goldenratio3.github.io/AuthorQuiz/)
 
 ## Getting Started
 
