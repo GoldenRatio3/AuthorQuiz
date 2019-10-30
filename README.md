@@ -12,6 +12,10 @@ Clone this repo and run `npm start`
 
 `Node >= 8.10` and `npm >= 5.6`
 
+## Deploy
+
+To deploy to GitHub pages run `npm run deploy`
+
 ## Contributing
 
 Feel free to contribute by submitting pull requests.
